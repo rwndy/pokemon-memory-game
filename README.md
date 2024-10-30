@@ -1,7 +1,5 @@
 ## Mini game Pokemon Memory Game
 
-Phone book projecet
-
 ### Built With
 
 -   [React Vite Typescript](https://react.dev/)
