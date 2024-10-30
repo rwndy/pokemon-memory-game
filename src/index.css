@@ -1,0 +1,350 @@
+:root {
+    --pokemon-yellow: #ffcb05;
+    --pokemon-red: #d32f2f;
+    --pokemon-blue: #3b4cca;
+    --electric-blue: #4e9aff;
+    --grass-green: #4caf50;
+    --pokeball-gray: #f5f5f5;
+    --dark-gray: #2e2e2e;
+    --background-gradient: linear-gradient(to bottom, #fff7cc, #f5f5f5);
+    --secondary-color: #6b7280;
+    --secondary-hover: #4b5563;
+}
+
+body {
+    background: var(--background-gradient);
+    color: var(--dark-gray);
+}
+
+.header img {
+    animation: spin 3s infinite linear;
+}
+
+@keyframes spin {
+    0% {
+        transform: rotate(0);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+.game-container {
+    min-height: 100vh;
+    padding: 2rem;
+    max-width: 1400px;
+    margin: 0 auto;
+}
+
+.game-header {
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+.game-header h4 {
+    font-size: 2rem;
+    font-weight: bold;
+    margin-bottom: 1rem;
+}
+
+.buttons-container {
+    display: flex;
+    gap: 1.25rem;
+    justify-content: center;
+    margin-bottom: 1.25rem;
+}
+
+.game-button {
+    border: none;
+    padding: 10px 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transition:
+        transform 0.2s,
+        box-shadow 0.2s;
+    cursor: pointer;
+    color: white;
+}
+
+.game-button.primary {
+    background-color: var(--pokemon-yellow);
+}
+
+.game-button.primary:hover {
+    transform: scale(1.05);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+}
+
+.game-button.secondary {
+    background-color: var(--pokemon-blue);
+}
+
+.game-button.secondary:hover {
+    transform: scale(1.05);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+}
+
+.game-stats {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    margin: 1rem 0;
+    font-size: 1.2rem;
+    font-weight: bold;
+}
+
+.layout-board {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 1.25rem;
+}
+
+.layout-card-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: 1.25rem;
+}
+
+.card {
+    perspective: 1000px;
+    aspect-ratio: 3/4;
+    cursor: pointer;
+    position: relative;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transition: transform 0.5s;
+}
+
+.card-inner {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    transition: transform 0.6s;
+    transform-style: preserve-3d;
+    border-radius: 0.625rem;
+    box-shadow: var(--card-shadow);
+}
+
+.card:not(.matched):hover .card-inner {
+    box-shadow: var(--card-hover-shadow);
+}
+
+.card-inner.flipped {
+    transform: rotateY(180deg);
+}
+
+.card-front,
+.card-back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+    -webkit-backface-visibility: hidden;
+    border-radius: 0.625rem;
+    overflow: hidden;
+}
+
+.card-front img,
+.card-back img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.card-front {
+    background-color: #f1f1f1;
+}
+
+.card-back {
+    background-color: white;
+    transform: rotateY(180deg);
+}
+
+.card.matched .card-inner {
+    box-shadow: 0 0 15px var(--success-color);
+}
+
+@keyframes matchAnimation {
+    0% {
+        transform: rotateY(180deg) scale(1);
+    }
+    50% {
+        transform: rotateY(180deg) scale(1.1);
+    }
+    100% {
+        transform: rotateY(180deg) scale(1);
+    }
+}
+
+.card.matched .card-inner.flipped {
+    animation: matchAnimation 0.5s ease-out;
+}
+
+@media (max-width: 768px) {
+    .game-container {
+        padding: 1rem;
+    }
+
+    .game-header h4 {
+        font-size: 1.5rem;
+    }
+
+    .layout-card-container {
+        grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+        gap: 0.75rem;
+    }
+
+    .game-stats {
+        flex-direction: column;
+        align-items: center;
+        gap: 0.5rem;
+    }
+
+    .stat-card {
+        width: 100%;
+        max-width: 200px;
+    }
+
+    .footer-links {
+        flex-direction: column;
+        gap: 1rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .buttons-container {
+        flex-direction: column;
+        gap: 0.75rem;
+    }
+}
+
+.header-content {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+}
+
+.title-pokemon {
+    color: var(--pokemon-yellow);
+}
+
+.title-match {
+    color: var(--pokemon-blue);
+}
+
+.button-icon {
+    width: 1.25rem;
+    height: 1.25rem;
+    margin-right: 0.5rem;
+}
+
+.stat-card {
+    background: white;
+    padding: 1rem;
+    border-radius: 0.5rem;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.stat-icon {
+    width: 1.5rem;
+    height: 1.5rem;
+    color: var(--pokemon-yellow);
+}
+
+.stat-label {
+    color: var(--dark-gray);
+    font-size: 0.875rem;
+}
+
+.stat-value {
+    color: var(--pokemon-blue);
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+.card-pattern {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(
+        45deg,
+        var(--pokemon-blue) 25%,
+        transparent 25%,
+        transparent 75%,
+        var(--pokemon-blue) 75%
+    );
+    background-size: 10px 10px;
+    opacity: 0.1;
+}
+
+.pokeball-pattern {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    background: var(--pokemon-yellow);
+    opacity: 0.2;
+}
+
+.pokeball-pattern::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 0;
+    right: 0;
+    height: 4px;
+    background: var(--dark-gray);
+    transform: translateY(-50%);
+}
+
+.game-footer {
+    margin-top: 3rem;
+    text-align: center;
+    padding: 2rem 0;
+    border-top: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+.footer-links {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    margin-bottom: 1rem;
+}
+
+.footer-link {
+    color: var(--pokemon-blue);
+    text-decoration: none;
+    transition: color 0.2s;
+}
+
+.footer-link:hover {
+    color: var(--pokemon-yellow);
+}
+
+.footer-trivia {
+    color: var(--secondary-color);
+    font-size: 0.875rem;
+}
+
+@keyframes glowMatch {
+    0% {
+        box-shadow: 0 0 5px var(--grass-green);
+    }
+    50% {
+        box-shadow: 0 0 20px var(--grass-green);
+    }
+    100% {
+        box-shadow: 0 0 5px var(--grass-green);
+    }
+}
+
+.card.matched .card-inner {
+    animation: glowMatch 2s infinite;
+}

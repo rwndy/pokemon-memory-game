@@ -1,0 +1,144 @@
+{
+    "data": [
+        {
+            "id": 1,
+            "pairId": "A",
+            "image": "/assets/illustrations/card-black-kyuremex.png"
+        },
+        {
+            "id": 2,
+            "pairId": "A",
+            "image": "/assets/illustrations/card-black-kyuremex.png"
+        },
+        {
+            "id": 3,
+            "pairId": "B",
+            "image": "/assets/illustrations/card-durantex.png"
+        },
+        {
+            "id": 4,
+            "pairId": "B",
+            "image": "/assets/illustrations/card-durantex.png"
+        },
+        {
+            "id": 5,
+            "pairId": "C",
+            "image": "/assets/illustrations/card-hooh.png"
+        },
+        {
+            "id": 6,
+            "pairId": "C",
+            "image": "/assets/illustrations/card-hooh.png"
+        },
+        {
+            "id": 7,
+            "pairId": "D",
+            "image": "/assets/illustrations/card-latiasex.png"
+        },
+        {
+            "id": 8,
+            "pairId": "D",
+            "image": "/assets/illustrations/card-latiasex.png"
+        },
+        {
+            "id": 9,
+            "pairId": "E",
+            "image": "/assets/illustrations/card-magnezone.png"
+        },
+        {
+            "id": 10,
+            "pairId": "E",
+            "image": "/assets/illustrations/card-magnezone.png"
+        },
+        {
+            "id": 11,
+            "pairId": "F",
+            "image": "/assets/illustrations/card-miloticex.png"
+        },
+        {
+            "id": 12,
+            "pairId": "F",
+            "image": "/assets/illustrations/card-miloticex.png"
+        },
+        {
+            "id": 13,
+            "pairId": "G",
+            "image": "/assets/illustrations/card-miraidon.png"
+        },
+        {
+            "id": 14,
+            "pairId": "G",
+            "image": "/assets/illustrations/card-miraidon.png"
+        },
+        {
+            "id": 15,
+            "pairId": "H",
+            "image": "/assets/illustrations/card-ninetales.png"
+        },
+        {
+            "id": 16,
+            "pairId": "H",
+            "image": "/assets/illustrations/card-ninetales.png"
+        },
+        {
+            "id": 17,
+            "pairId": "I",
+            "image": "/assets/illustrations/card-paldean-tauros.png"
+        },
+        {
+            "id": 18,
+            "pairId": "I",
+            "image": "/assets/illustrations/card-paldean-tauros.png"
+        },
+        {
+            "id": 19,
+            "pairId": "J",
+            "image": "/assets/illustrations/card-pikachuex.png"
+        },
+        {
+            "id": 20,
+            "pairId": "J",
+            "image": "/assets/illustrations/card-pikachuex.png"
+        },
+        {
+            "id": 21,
+            "pairId": "K",
+            "image": "/assets/illustrations/card-togepi.png"
+        },
+        {
+            "id": 22,
+            "pairId": "K",
+            "image": "/assets/illustrations/card-togepi.png"
+        },
+        {
+            "id": 23,
+            "pairId": "L",
+            "image": "/assets/illustrations/card-vivillon.png"
+        },
+        {
+            "id": 24,
+            "pairId": "L",
+            "image": "/assets/illustrations/card-vivillon.png"
+        },
+        {
+            "id": 25,
+            "pairId": "M",
+            "image": "/assets/illustrations/card-walrein.png"
+        },
+        {
+            "id": 26,
+            "pairId": "M",
+            "image": "/assets/illustrations/card-walrein.png"
+        },
+        {
+            "id": 27,
+            "pairId": "N",
+            "image": "/assets/illustrations/card-xerneas.png"
+        },
+        {
+            "id": 28,
+            "pairId": "N",
+            "image": "/assets/illustrations/card-xerneas.png"
+        }
+    ]
+}
